@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vuepress 搭建个人博客 | 你好世界</title>
+    <meta name="description" content="欢迎来到我的世界">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.cb16a670.css" as="style"><link rel="preload" href="/assets/js/app.2795dc5e.js" as="script"><link rel="preload" href="/assets/js/2.aa29f38f.js" as="script"><link rel="preload" href="/assets/js/10.daba8064.js" as="script"><link rel="prefetch" href="/assets/js/11.92a8e02c.js"><link rel="prefetch" href="/assets/js/3.4bc72901.js"><link rel="prefetch" href="/assets/js/4.8a59b792.js"><link rel="prefetch" href="/assets/js/5.f435743f.js"><link rel="prefetch" href="/assets/js/6.cafd929c.js"><link rel="prefetch" href="/assets/js/7.6dcc001c.js"><link rel="prefetch" href="/assets/js/8.ed8a7161.js"><link rel="prefetch" href="/assets/js/9.f69f357f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cb16a670.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">你好世界</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">js</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/" class="nav-link">js基础</a></li><li class="dropdown-item"><!----> <a href="/jsg/" class="nav-link">js高级</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">js</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/" class="nav-link">js基础</a></li><li class="dropdown-item"><!----> <a href="/jsg/" class="nav-link">js高级</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>vue学习</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuex/" class="active sidebar-link">vuepress 搭建个人博客</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuex/#vuepress-搭建个人博客" class="sidebar-link">vuepress 搭建个人博客</a></li></ul></li><li><a href="/props/" class="sidebar-link">这是 props 页面</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="vuepress-搭建个人博客"><a href="#vuepress-搭建个人博客" aria-hidden="true" class="header-anchor">#</a> vuepress 搭建个人博客</h2> <ol><li>全局安装 vuepress
+npm install -g vuepress</li> <li>建立一个文件夹
+mkdir ruanyeblog</li> <li>npm init -y</li> <li>创建文件夹和文件 参考下面的目录
+.
+├─ docs 文件夹
+│ ├─ README.md
+│ └─ .vuepress 文件夹
+│ └─ config.js
+└─ package.json</li> <li>配置 package.json 的命令</li></ol> <div class="language-json extra-class"><pre class="language-json"><code><span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress dev docs&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress build docs&quot;</span>
+</code></pre></div><ol start="6"><li>配置默认主题 docs/README.md</li></ol> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">home</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">heroImage</span><span class="token punctuation">:</span> /hero.png
+<span class="token key atrule">actionText</span><span class="token punctuation">:</span> 快速上手 →
+<span class="token key atrule">actionLink</span><span class="token punctuation">:</span> /zh/guide/
+<span class="token key atrule">features</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> 简洁至上
+    <span class="token key atrule">details</span><span class="token punctuation">:</span> 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
+  <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> Vue驱动
+    <span class="token key atrule">details</span><span class="token punctuation">:</span> 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
+  <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> 高性能
+    <span class="token key atrule">details</span><span class="token punctuation">:</span> VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+<span class="token key atrule">footer</span><span class="token punctuation">:</span> MIT Licensed <span class="token punctuation">|</span> Copyright © 2018<span class="token punctuation">-</span>present Evan You
+<span class="token punctuation">---</span>
+
+</code></pre></div><ol start="6"><li><p>建立静态资源目录
+.vuepress/public</p></li> <li><p>在 docs/.vuepress/config.js</p></li></ol> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  title<span class="token punctuation">:</span> <span class="token string">'Hello VuePress'</span><span class="token punctuation">,</span>
+  description<span class="token punctuation">:</span> <span class="token string">'Just playing around'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ol start="8"><li>配置导航 .vuepress/config.js,
+可以下拉的导航使用的 items</li></ol> <div class="language-js extra-class"><pre class="language-js"><code>themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  nav<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> text<span class="token punctuation">:</span> <span class="token string">'首页'</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token string">'/'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> text<span class="token punctuation">:</span> <span class="token string">'web'</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token string">'/web/'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      text<span class="token punctuation">:</span> <span class="token string">'js'</span><span class="token punctuation">,</span>
+      items<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> text<span class="token punctuation">:</span> <span class="token string">'js基础'</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token regex">/js/</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> text<span class="token punctuation">:</span> <span class="token string">'js高级'</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token regex">/jsg/</span> <span class="token punctuation">}</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="9"><li>让导航可以使用
+docs/web/README.md</li> <li>一级的侧边栏配置 对应的路径就是 docs 下面的文件夹</li></ol> <div class="language-js extra-class"><pre class="language-js"><code>sidebar<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token string">'/web/'</span><span class="token punctuation">,</span> <span class="token string">'/js/'</span><span class="token punctuation">,</span> <span class="token string">'/vue/'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><ol start="11"><li>侧边栏的分组</li></ol> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token punctuation">{</span>
+     title<span class="token punctuation">:</span> <span class="token string">'vue学习'</span><span class="token punctuation">,</span>
+     collapsable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+     children<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'/vuex/'</span><span class="token punctuation">,</span> <span class="token string">'/props/'</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><ol start="12"><li>发布到 github
+建立文件 deploy.sh</li> <li>git 仓库起名
+ruanye2019.github.io</li> <li>发布时候的命令
+npm run deploy</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/props/">
+          这是 props 页面
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2795dc5e.js" defer></script><script src="/assets/js/2.aa29f38f.js" defer></script><script src="/assets/js/10.daba8064.js" defer></script>
+  </body>
+</html>
